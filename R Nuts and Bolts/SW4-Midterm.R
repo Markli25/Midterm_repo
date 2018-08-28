@@ -3,7 +3,7 @@
 #readimagethrulocal
 install.packages("imager")
 library(imager)
-file <- system.file('extdata/index.jpg',package='imager')
+file <- system.file('extdata/parrots.png',package='imager')
 im <- load.image(file)
 plot(im)
 
