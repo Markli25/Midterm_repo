@@ -28,7 +28,12 @@ library(imager)
 file <- system.file('extdata/parrots.png',package='imager')
 im <- load.image(file)
 subset<-function(data,x){
+  if(x==TRUE){
 grayscale(data, method = "Luma", drop = x)
+  }
+  else{
+   x<- load.image(file)
+  }
 }
 y<-subset(im,TRUE)
 plot(y)
